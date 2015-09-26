@@ -14,10 +14,25 @@
  *= require_self
  */
 
-h1 {
-  color: red;
-}
+@import "bootstrap";
+@import "bootstrap-sprockets";
 
 body {
-  background-color: #303030;
+    background-color: #303030;
+    color: #ffffff;
 }
+
+#main {
+    padding-top: 25px;
+    padding-right: 450px;
+    padding-bottom: 25px;
+}
+
+#expander{
+    padding-top: 380px;
+}
+
+#sidebar {
+    border-left: 1px solid #5d5d5d;
+}
+
