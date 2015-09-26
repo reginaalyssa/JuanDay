@@ -1,21 +1,16 @@
-<div class='panel panel-default'>
-  <div class='panel'>
-    <div class='panel-heading'>
-      
+<div class="panel panel-default" id="expander">
+    <div class="panel-body">
+        <div class="col-md-8">
+        <%= image_tag("samplepic.png", :alt => "Your scenario", id: 'scenario-1') %>
+        </div>     
+        <div id="questionanswer" class="col-md-4">
+          <%= @question.text %> <br> <br>
+          <% @answers.each do |answer| %>
+            <li>
+              <%= button_to "#{answer.text}", next_scene_path(scene_id: answer.scene_id), remote: true, class: "btn btn-default", style: 'white-space: normal;' %>
+              <br> <br>
+            </li>
+          <% end %>
+        </div>
     </div>
-
-    <div class='panel-body'>
-      <%= @question.text %>
-    </div>
-  </div>
-
-  <div class='panel'>
-    <ul>
-      <% @answers.each do |answer| %>
-        <li>
-          <%= button_to "#{answer.text}", next_scene_path(scene_id: answer.scene_id), remote: true %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
 </div>

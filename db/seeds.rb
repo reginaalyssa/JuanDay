@@ -15,7 +15,7 @@ State.delete_all
 State.create!(scene_id: 0)
 
 questions = [ 
-              {text: "Question 1", scene_id: 1},
+              {text: "5:55 na, nag-alarm cellphone mo. Kring kring, ganun. Oh tapos? Ano gagawin mo? ", scene_id: 1},
               {text: "Question 2", scene_id: 2},
               {text: "Question 3", scene_id: 3},
               {text: "Question 4", scene_id: 4},
@@ -43,7 +43,7 @@ questions = [
 >>>>>>> merge
             ]
 
-answers = [ {"snooze" => 2, "gising" => 3},
+answers = [ {"May 5 minutes pa, sobrang laki ng matutulong nun sa energy stored ng katawan mo kaya matutulog ka munang butaw ka." => 2, "Gigising ako malamang." => 3},
   {"sabay sa magulang" => 7, "commute" => 6},
   {"fb (5 minutes)" => 4, "ligo na" => 2},
   {"di siya naligo" => 5, "nag-igib ng tubig" => 2},
