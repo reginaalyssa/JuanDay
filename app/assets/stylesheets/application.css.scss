@@ -19,7 +19,6 @@
 
 body {
     background-color: #303030;
-    color: #ffffff;
 }
 
 #main {
@@ -28,11 +27,17 @@ body {
     padding-bottom: 25px;
 }
 
+#core {
+    border-right: 1px solid #5d5d5d;
+}
+
 #expander{
     padding-top: 380px;
 }
 
-#sidebar {
-    border-left: 1px solid #5d5d5d;
+#square{
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
 }
 
