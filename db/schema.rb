@@ -16,12 +16,14 @@ ActiveRecord::Schema.define(version: 20150926104121) do
   create_table "answers", force: :cascade do |t|
     t.string   "text"
     t.integer  "question_id"
+    t.integer  "scene_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "questions", force: :cascade do |t|
     t.string   "text"
+    t.integer  "scene_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
