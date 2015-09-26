@@ -11,31 +11,33 @@
 Question.delete_all
 Answer.delete_all
 
-questions = ["Question 1",
-  "Question 2"]
+questions = [ 
+              {text: "Question 1", scene_id: 1},
+              {text: "Question 2", scene_id: 2} 
+            ]
 answers = [ ["answer 1", "answer 2"],
   ["answer 1", "answer 2", "answer 3"]]
 
 set = questions.zip(answers).to_h
 
 set.each do |q,a|
-  question = Question.create!(text: q)
+  question = Question.create!(q)
   a.each do |answer|
     question.answers.create!(text: answer)
   end
 end
 
-a = {
-  question: {
-    text: 'hello',
-    answers: {
-      answer_1: ['scene_2', 'scene_4'],
-      answer_2: ['scene_3']
-    }
-  }
-}
+# a = {
+#   question: {
+#     text: 'hello',
+#     answers: {
+#       answer_1: ['scene_2', 'scene_4'],
+#       answer_2: ['scene_3']
+#     }
+#   }
+# }
 
-json = ActiveSupport::JSON.decode(a)
-json.each do |a|
-  p a
-end
+# json = ActiveSupport::JSON.decode(a)
+# json.each do |a|
+#   p a
+# end
