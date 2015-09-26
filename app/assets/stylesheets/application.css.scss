@@ -22,9 +22,8 @@ body {
 }
 
 #main {
-    padding-top: 25px;
     padding-right: 450px;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 }
 
 #core {
@@ -32,7 +31,8 @@ body {
 }
 
 #expander{
-    padding-top: 380px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #square{
@@ -45,4 +45,15 @@ body {
 
 #padder{
     padding-bottom: 100px;
+}
+
+#serkol-1:hover{
+    background-image:url('serkol-08.png')
+}
+
+#questionanswer{
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
 }
