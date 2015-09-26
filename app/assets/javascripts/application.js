@@ -14,3 +14,30 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+  $('.scene-link').click(function(e) {
+    var scene_id;
+    if ($(this).id === "btn-play") {
+      scene_id = 1;
+    } else {
+      scene_id = parseInt($(this).data('scene-id'));
+    }
+
+    $.ajax({
+      url: '/next_scene',
+      type: 'POST',
+      data: {'scene_id': 1},
+      dataType: 'script',
+      format: 'js',
+      succes: function() {
+        console.log('success');
+
+      },
+      error: function(e, data) {
+        console.log(e);
+        console.log(data);
+      }
+    });
+  })
+});

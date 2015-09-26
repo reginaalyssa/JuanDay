@@ -19,7 +19,6 @@
 
 body {
     background-color: #303030;
-    color: #ffffff;
 }
 
 #main {
@@ -34,4 +33,17 @@ body {
 
 #sidebar {
     border-left: 1px solid #5d5d5d;
+}
+
+.scene-link {
+  cursor: pointer;
+}
+
+
+.scene-link:hover #btn-play:hover {
+  color: blue;
+}
+
+#btn-play {
+  cursor: pointer;
 }

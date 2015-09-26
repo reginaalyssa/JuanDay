@@ -9,12 +9,19 @@
         </div>
         
         <div id="content">
-            <div class="panel panel-default" id="expander">
-                <div class="panel-body">
-                    They waste precious food.
-                    <%= button_to 'Play', '#', id: 'btn-play' %>
+            <% unless session[:scene_id].nil? %>
+                <% if session[:scene_id] == '1' %>
+                    <%= render 'questions/scene_1' %>
+                <% else %>
+                    <%= render "questions/scene_#{session[:scene_id]}" %>
+                <% end %>
+            <% else %>
+                <div class="panel panel-default" id="expander">
+                    <div class="panel-body">
+                    <%= button_to 'Play', next_scene_path, remote: true %>
+                    </div>
                 </div>
-            </div>
+            <% end %>
         </div>
         
         <div id="progress">
@@ -32,4 +39,3 @@
     somecontent
     somecontent
 </div>
-<%= link_to 'Play', start_path %>
