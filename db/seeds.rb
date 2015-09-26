@@ -138,6 +138,7 @@ end
 =======
 >>>>>>> add scenes
   end
+<<<<<<< HEAD
 end
 
 # a = {
@@ -162,3 +163,6 @@ end
 #   p a
 # end
 >>>>>>> add scene1
+=======
+end
+>>>>>>> merge
