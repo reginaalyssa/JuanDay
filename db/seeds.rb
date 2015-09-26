@@ -10,20 +10,26 @@
 
 Question.delete_all
 Answer.delete_all
+State.delete_all
+
+State.create!(scene_id: 0)
 
 questions = [ 
               {text: "Question 1", scene_id: 1},
-              {text: "Question 2", scene_id: 2} 
+              {text: "Question 2", scene_id: 2},
+              {text: "Question 3", scene_id: 3},
+              {text: "Question 4", scene_id: 4}
             ]
-answers = [ ["answer 1", "answer 2"],
-  ["answer 1", "answer 2", "answer 3"]]
+answers = [ {"snooze" => 2, "gising" => 3},
+  {"answer 1" => 1, "answer 2" => 2, "answer 3" => 3},
+  {"fb (5 minutes)" => 4, "ligo na" => 2} ]
 
 set = questions.zip(answers).to_h
 
 set.each do |q,a|
   question = Question.create!(q)
-  a.each do |answer|
-    question.answers.create!(text: answer)
+  a.each do |text, scene_id|
+    question.answers.create!(text: text, scene_id: scene_id)
   end
 end
 

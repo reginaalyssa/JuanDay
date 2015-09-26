@@ -1,0 +1,19 @@
+<div class='panel panel-default'>
+  <div class='panel'>
+    <div class='panel-heading'>
+
+    </div>
+
+    <div class='panel-body'>
+      <%= @question.text %>
+    </div>
+  </div>
+
+  <div class='panel'>
+    <ul>
+      <% @answers.each do |answer| %>
+        <li><%= link_to "#{answer.text}", '#' %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

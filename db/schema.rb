@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150926104121) do
+ActiveRecord::Schema.define(version: 20150926143123) do
 
   create_table "answers", force: :cascade do |t|
     t.string   "text"
@@ -23,6 +23,12 @@ ActiveRecord::Schema.define(version: 20150926104121) do
 
   create_table "questions", force: :cascade do |t|
     t.string   "text"
+    t.integer  "scene_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "states", force: :cascade do |t|
     t.integer  "scene_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
