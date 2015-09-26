@@ -1,0 +1,15 @@
+<% serkol_count = 12 %>
+
+<% if session[:scene_count].nil? %>
+  <% (0...serkol_count).each do |i| %>
+    <%= image_tag("serkol-07.png", :alt => "Your progress through the day", id: 'serkol-1') %>
+  <% end %>
+<% else %>
+  <% (0...session[:scene_count]).each do |i| %>
+    <%= image_tag("serkol-08.png", :alt => "Your progress through the day", id: 'serkol-1') %>
+  <% end %>
+
+  <% (0...(serkol_count - session[:scene_count])).each do |i| %>
+    <%= image_tag("serkol-07.png", :alt => "Your progress through the day", id: 'serkol-1') %>
+  <% end %>
+<% end %>

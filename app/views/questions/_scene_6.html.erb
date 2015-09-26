@@ -11,6 +11,9 @@
 
   <div class='panel'>
     <ul>
+      <% if @answers.empty? %>
+        <%= button_to "Next", next_scene_path(scene_id: 8), remote: true %>
+      <% end %>
       <% @answers.each do |answer| %>
         <li>
           <%= button_to "#{answer.text}", next_scene_path(scene_id: answer.scene_id), remote: true %>

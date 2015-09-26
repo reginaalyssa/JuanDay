@@ -34,10 +34,15 @@ questions = [
               {text: "Question 13", scene_id: 13},
               {text: "Question 14", scene_id: 14},
               {text: "Question 15", scene_id: 15},
+<<<<<<< HEAD
               {text: "Question 16", scene_id: 16},
               {text: "Question 17", scene_id: 17}
 <<<<<<< HEAD
+=======
+              {text: "Question 16", scene_id: 16}
+>>>>>>> merge
             ]
+
 answers = [ {"snooze" => 2, "gising" => 3},
   {"sabay sa magulang" => 7, "commute" => 6},
   {"fb (5 minutes)" => 4, "ligo na" => 2},
@@ -108,6 +113,7 @@ set.each do |q,a|
 <<<<<<< HEAD
 <<<<<<< HEAD
   question = Question.create!(q)
+<<<<<<< HEAD
   a.each do |text, scene_id|
     question.answers.create!(text: text, scene_id: scene_id)
 <<<<<<< HEAD
@@ -137,6 +143,12 @@ end
     question.answers.create!(text: answer)
 =======
 >>>>>>> add scenes
+=======
+  unless a.empty?
+    a.each do |text, scene_id|
+      question.answers.create!(text: text, scene_id: scene_id)
+    end
+>>>>>>> merge
   end
 <<<<<<< HEAD
 end

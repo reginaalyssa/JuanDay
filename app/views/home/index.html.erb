@@ -79,20 +79,27 @@
     </div>
 
     <div id="progress">
-        <div id="content">
-            <% unless session[:scene_id].nil? %>
-                <% if session[:scene_id] == '1' %>
-                    <%= render 'questions/scene_1' %>
-                <% else %>
-                    <%= render "questions/scene_#{session[:scene_id]}" %>
-                <% end %>
-            <% else %>
-                <div class="panel panel-default" id="expander">
-                    <div class="panel-body">
-                    <%= button_to 'Play', next_scene_path, remote: true %>
-                    </div>
-                </div>
-            <% end %>
+      <%= render 'home/serkol_count' %>
+    </div>
+</div>
+
+<div id="sidebar" class="col-md-2">
+    <div class=clock id=square>
+        <%= image_tag("clock-03.png", :alt => "The current time you have") %>
+    </div>
+
+
+    <div>
+        <%= image_tag("utils.png", :alt => "Money") %> UTILS
+    </div>
+    
+    <div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100" style="width:70%">
+            70%
+            </div>
+>>>>>>> merge
         </div>
     </div>
     

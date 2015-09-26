@@ -5,6 +5,12 @@ class QuestionsController < ApplicationController
   end
 
   def next_scene
+    if session[:scene_count].nil?
+      session[:scene_count] = 1
+    else
+      session[:scene_count] += 1
+    end
+    
     if session[:scene_id].nil?
       session[:scene_id] = 1
       @question = Question.find_by(scene_id: 1)
