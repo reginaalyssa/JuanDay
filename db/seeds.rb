@@ -10,6 +10,7 @@
 
 Question.delete_all
 Answer.delete_all
+<<<<<<< HEAD
 State.delete_all
 
 State.create!(scene_id: 0)
@@ -50,10 +51,18 @@ answers = [ {"snooze" => 2, "gising" => 3},
   {"fb" => 17},
   {"answer" => 17, "ignore scold" => 17}
   ]
+=======
+
+questions = ["Question 1",
+  "Question 2"]
+answers = [ ["answer 1", "answer 2"],
+  ["answer 1", "answer 2", "answer 3"]]
+>>>>>>> backend part
 
 set = questions.zip(answers).to_h
 
 set.each do |q,a|
+<<<<<<< HEAD
   question = Question.create!(q)
   a.each do |text, scene_id|
     question.answers.create!(text: text, scene_id: scene_id)
@@ -74,3 +83,25 @@ end
 # json.each do |a|
 #   p a
 # end
+=======
+  question = Question.create!(text: q)
+  a.each do |answer|
+    question.answers.create!(text: answer)
+  end
+end
+
+a = {
+  question: {
+    text: 'hello',
+    answers: {
+      answer_1: ['scene_2', 'scene_4'],
+      answer_2: ['scene_3']
+    }
+  }
+}
+
+json = ActiveSupport::JSON.decode(a)
+json.each do |a|
+  p a
+end
+>>>>>>> backend part

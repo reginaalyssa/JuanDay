@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   def start_scene
+<<<<<<< HEAD
     @question = Question.find_by(scene_id: 1) 
     @answers = @question.answers
   end
@@ -25,4 +26,9 @@ class QuestionsController < ApplicationController
       format.js{}
     end
   end
+=======
+    @question = Question.find(1) 
+    @answers = @question.answers
+  end
+>>>>>>> backend part
 end
