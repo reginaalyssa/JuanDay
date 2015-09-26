@@ -1,18 +1,20 @@
-<div id="core" class="col-md-9">
-    <div>
-        <div class="header"  id="main">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    They waste precious food.
-                </div>
-            </div>
-        </div>
-        
-        <div id="content">
-            <div class="panel panel-default" id="expander">
-                <div class="panel-body">
-                    They waste precious food.
-                    <%= button_to 'Play', '#', id: 'btn-play' %>
+<div id=core class="col-md-10">
+    <div class="header"  id="main">
+            <%= image_tag("icon1.png", :alt => "Juan Day", id: 'icon1') %>
+    </div>
+
+    <div id=content>
+        <div class="panel panel-default" id=expander>
+            <div class="panel-body">
+                <div class="col-md-8">
+                <%= image_tag("samplepic.png", :alt => "Your scenario", id: 'scenario-1') %>
+                </div>     
+                <div id=questionanswer class="col-md-4">
+                    5:55 na, nag-alarm cellphone mo. Kring kring, ganun. Oh tapos? Ano gagawin mo?  
+                    <br> <br>
+                    <button type="button" class="btn btn-default" style="white-space: normal;">Gigising ako malamang.</button>
+                    <br> <br>
+                    <button type="button" class="btn btn-default" style="white-space: normal;">May 5 minutes pa, sobrang laki ng matutulong nun sa energy stored ng katawan mo kaya matutulog ka munang butaw ka.</button>
                 </div>
             </div>
         </div>
@@ -41,7 +43,7 @@
         
         <%= image_tag("serkol-07.png", :alt => "Your progress through the day", id: 'serkol-11') %>
         
-        <%= image_tag("serkol-08.png", :alt => "Your progress through the day", id: 'serkol-12') %>
+        <%= image_tag("serkol-07.png", :alt => "Your progress through the day", id: 'serkol-12') %>
         
     </div>
 </div>
