@@ -18,11 +18,23 @@ questions = [
               {text: "Question 1", scene_id: 1},
               {text: "Question 2", scene_id: 2},
               {text: "Question 3", scene_id: 3},
-              {text: "Question 4", scene_id: 4}
+              {text: "Question 4", scene_id: 4},
+              {text: "Question 5", scene_id: 5},
+              {text: "Question 6", scene_id: 6},
+              {text: "Question 7", scene_id: 7},
+              {text: "Question 8", scene_id: 8},
+              {text: "Question 9", scene_id: 9}
             ]
 answers = [ {"snooze" => 2, "gising" => 3},
-  {"answer 1" => 1, "answer 2" => 2, "answer 3" => 3},
-  {"fb (5 minutes)" => 4, "ligo na" => 2} ]
+  {"sabay sa magulang" => 7, "commute" => 6},
+  {"fb (5 minutes)" => 4, "ligo na" => 2},
+  {"di siya naligo" => 5, "nag-igib ng tubig" => 2},
+  {"sabay sa magulang" => 7, 'commute' => 6},
+  {},
+  {"tuloy lang" => 8, "MRT" => 8},
+  {"help cram" => 9, "No help" => 10},
+  {"dinibdib" => 10, "nagpakopya siya" => 10}
+  ]
 
 set = questions.zip(answers).to_h
 
