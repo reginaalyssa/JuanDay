@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
   def start_scene
 <<<<<<< HEAD
+<<<<<<< HEAD
     @question = Question.find_by(scene_id: 1) 
     @answers = @question.answers
   end
@@ -28,6 +29,9 @@ class QuestionsController < ApplicationController
   end
 =======
     @question = Question.find(1) 
+=======
+    @question = Question.find_by(scene_id: 1) 
+>>>>>>> add scene1
     @answers = @question.answers
   end
 >>>>>>> backend part

@@ -21,15 +21,20 @@ ActiveRecord::Schema.define(version: 20150926104121) do
     t.string   "text"
     t.integer  "question_id"
 <<<<<<< HEAD
+<<<<<<< HEAD
     t.integer  "scene_id"
 =======
 >>>>>>> backend part
+=======
+    t.integer  "scene_id"
+>>>>>>> add scene1
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "questions", force: :cascade do |t|
     t.string   "text"
+<<<<<<< HEAD
 <<<<<<< HEAD
     t.integer  "scene_id"
     t.datetime "created_at", null: false
@@ -40,6 +45,9 @@ ActiveRecord::Schema.define(version: 20150926104121) do
     t.integer  "scene_id"
 =======
 >>>>>>> backend part
+=======
+    t.integer  "scene_id"
+>>>>>>> add scene1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

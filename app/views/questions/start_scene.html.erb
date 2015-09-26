@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div class='panel panel-default'>
   <div class='panel-heading'>
     <h2> Scene 1 </h2>
@@ -37,3 +38,24 @@
   </div>
 </div>
 >>>>>>> backend part
+=======
+<div class='container'>
+  <div class='panel panel-default'>
+    <div class='panel-heading'>
+      <h2> Scene 1 </h2>
+    </div>
+
+    <div class='panel-body'>
+      <%= @question.text %>
+    </div>
+  </div>
+
+  <div class='panel'>
+    <ul>
+      <% @answers.each do |answer| %>
+        <li><%= link_to "#{answer.text}", '#' %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+>>>>>>> add scene1
