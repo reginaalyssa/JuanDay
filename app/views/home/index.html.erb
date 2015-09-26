@@ -55,9 +55,26 @@
                     <br>
                     <button type="button" class="btn btn-default" id=choice1 style="white-space: normal;">Gigising ako malamang.</button>
                     <br> 
-                    <button type="button" class="btn btn-default" id=choice2 style="white-space: normal;">May 5 minutes pa, sobrang laki ng matutulong nun sa energy stored ng katawan mo kaya matutulog ka munang butaw ka.</button>
+
+                    <button type="button" class="btn btn-default" id=choice style="white-space: normal;">May 5 minutes pa, sobrang laki ng matutulong nun sa energy stored ng katawan mo kaya matutulog ka munang butaw ka.</button>
                 </div>
             </div>
+        </div>
+        
+        <div id="content">
+            <% unless session[:scene_id].nil? %>
+                <% if session[:scene_id] == '1' %>
+                    <%= render 'questions/scene_1' %>
+                <% else %>
+                    <%= render "questions/scene_#{session[:scene_id]}" %>
+                <% end %>
+            <% else %>
+                <div class="panel panel-default" id="expander">
+                    <div class="panel-body">
+                    <%= button_to 'Play', next_scene_path, remote: true %>
+                    </div>
+                </div>
+            <% end %>
         </div>
     </div>
 

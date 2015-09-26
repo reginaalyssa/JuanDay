@@ -12,10 +12,14 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150926143123) do
 =======
 ActiveRecord::Schema.define(version: 20150926104121) do
 >>>>>>> backend part
+=======
+ActiveRecord::Schema.define(version: 20150926143123) do
+>>>>>>> add scenes
 
   create_table "answers", force: :cascade do |t|
     t.string   "text"
@@ -48,6 +52,12 @@ ActiveRecord::Schema.define(version: 20150926104121) do
 =======
     t.integer  "scene_id"
 >>>>>>> add scene1
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "states", force: :cascade do |t|
+    t.integer  "scene_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
