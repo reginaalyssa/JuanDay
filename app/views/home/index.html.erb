@@ -1,3 +1,44 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script>
+        var x = $("#min");   
+        document.addEventListener("click", function (e){
+            if (x.style.webkitAnimationPlayState === "paused")
+            {
+                x.style.webkitAnimationPlayState = "running";
+            }
+            else
+            {
+                x.style.webkitAnimationPlayState = "paused";
+            }, false);
+        })
+    </script>
+
+<script type="text/javascript">
+    $(window).load(function(){
+        $('#welcome').modal('show');
+    });
+</script>
+
+<!-- Modal -->
+<div class="modal fade in" id="welcome" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Welcome to Juan Day</h4>
+            </div>
+            <div class="modal-body">
+                <p> Hello! This is Juan Day, where we try to simulate what it feels like to live within Filipino Culture! Throughout the quiz, you'll be faced with mundane situations within the Filipino setting where our flaws as a society shall be made more apparent. The choice lies in your hands whether you'll cultivate this "culture" or take action to try and change it.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of modal -->
+
 <div id=core class="col-md-10">
     <div class="header"  id="main">
             <%= image_tag("icon1.png", :alt => "Juan Day", id: 'icon1') %>
@@ -7,14 +48,14 @@
         <div class="panel panel-default" id=expander>
             <div class="panel-body">
                 <div class="col-md-8">
-                <%= image_tag("samplepic.png", :alt => "Your scenario", id: 'scenario-1') %>
+                <%= image_tag("1.jpg", :alt => "Your scenario", id: 'scenario') %>
                 </div>     
                 <div id=questionanswer class="col-md-4">
                     <h1 id=question> "5:55AM na, nag-alarm cellphone mo. Kring kring, ganun. Oh tapos? Ano gagawin mo?"</h1>  
                     <br>
-                    <button type="button" class="btn btn-default" id=choice style="white-space: normal;">Gigising ako malamang.</button>
+                    <button type="button" class="btn btn-default" id=choice1 style="white-space: normal;">Gigising ako malamang.</button>
                     <br> 
-                    <button type="button" class="btn btn-default" id=choice style="white-space: normal;">May 5 minutes pa, sobrang laki ng matutulong nun sa energy stored ng katawan mo kaya matutulog ka munang butaw ka.</button>
+                    <button type="button" class="btn btn-default" id=choice2 style="white-space: normal;">May 5 minutes pa, sobrang laki ng matutulong nun sa energy stored ng katawan mo kaya matutulog ka munang butaw ka.</button>
                 </div>
             </div>
         </div>
@@ -50,7 +91,11 @@
 
 <div id=sidebar class="col-md-2">
     <div class=clock id=square>
-        <%= image_tag("clock-03.png", :alt => "The current time you have") %>
+        <ul id="clock"> 
+            <li id="sec"></li>
+            <li id="hour"></li>
+            <li id="min"></li>
+        </ul>
     </div>
 
 
@@ -60,7 +105,7 @@
     
     <div>
         <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+            <div class="progress-bar" id="util-bar" role="progressbar" aria-valuenow="70"
             aria-valuemin="0" aria-valuemax="100" style="width:70%">
             70%
             </div>
