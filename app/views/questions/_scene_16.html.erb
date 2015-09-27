@@ -1,15 +1,15 @@
 <div class="panel panel-default" id="expander">
     <div class="panel-body">
         <div class="col-md-8">
-        <%= image_tag("samplepic.png", :alt => "Your scenario", id: 'scenario-16') %>
+          <%= image_tag("samplepic.png", :alt => "Your scenario", id: 'scenario') %>
         </div>     
         <div id="questionanswer" class="col-md-4">
-          <%= @question.text %> <br> <br>
-          <% @answers.each do |answer| %>
-            <li>
-              <%= button_to "#{answer.text}", next_scene_path(scene_id: answer.scene_id), remote: true, class: "btn btn-default scene-link", style: 'white-space: normal;' %>
-              <br> <br>
-            </li>
+          <h1 id="question"> <%= @question.text %></h1> <br>
+
+          <% @answers.each_with_index do |answer, i| %>
+              <%= button_to "#{answer.text}", next_scene_path(scene_id: answer.scene_id), remote: true, class: "btn btn-default choice", id: "#{@question.scene_id}_#{answer.scene_id}", 
+                style: 'white-space: normal;' %>
+              <br>
           <% end %>
         </div>
     </div>

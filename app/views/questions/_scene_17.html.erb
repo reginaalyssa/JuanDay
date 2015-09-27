@@ -1,11 +1,11 @@
 <div class="panel panel-default" id="expander">
     <div class="panel-body">
         <div class="col-md-8">
-        <%= image_tag("samplepic.png", :alt => "Your scenario", id: 'scenario-17') %>
+        <%= image_tag("13.jpg", :alt => "Your scenario", id: 'scenario-17') %>
         </div>     
         <div id="questionanswer" class="col-md-4">
-          <%= @question.text %> <br> <br>
-          <%= button_to "Restart", next_scene_path(scene_id: 1), remote: true, class: "btn btn-default", style: 'white-space: normal;' %>
+          <h1 id="question"> <%= @question.text %> </h1> <br>
+          <%= button_to "Restart", next_scene_path(scene_id: 1), remote: true, class: "btn btn-default choice", style: 'white-space: normal;' %>
         </div>
     </div>
 </div>

@@ -79,6 +79,10 @@ body {
     width: 100%;
 }
 
+.choice {
+  width: 100%;
+}
+
 #question{
     font-family: 'Droid Serif', serif;
 }
@@ -90,11 +94,11 @@ body {
         
 #clock {
     position: relative;
-        width: 180px;
-        height: 180px;
-        margin: 20px auto 0 auto;
-        background: url('clock-03.png');
-        list-style: none;
+    width: 180px;
+    height: 180px;
+    margin: 20px auto 0 auto;
+    background: url('clock-03.png');
+    list-style: none;
 }
         
 #min, #hour {
@@ -105,7 +109,7 @@ body {
     left: 85px;
 }
 
-#min {
+li #min {
     background: url('minhand.png');
     z-index: 2;         
     -webkit-animation: rotate 1s infinite linear;
