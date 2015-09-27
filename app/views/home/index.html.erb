@@ -14,8 +14,13 @@
                 x.style.webkitAnimationPlayState = "paused";
             }, false);
         })
-    
     </script>
+
+<script type="text/javascript">
+    $(window).load(function(){
+        $('#welcome').modal('show');
+    });
+</script>
 
 <!-- Modal -->
 <div class="modal fade in" id="welcome" role="dialog">
@@ -50,7 +55,7 @@
                     <br>
                     <button type="button" class="btn btn-default" id=choice1 style="white-space: normal;">Gigising ako malamang.</button>
                     <br> 
-                    <button type="button" class="btn btn-default" id=choice2 data-toggle="modal" href="#welcome" style="white-space: normal;">May 5 minutes pa, sobrang laki ng matutulong nun sa energy stored ng katawan mo kaya matutulog ka munang butaw ka.</button>
+                    <button type="button" class="btn btn-default" id=choice2 style="white-space: normal;">May 5 minutes pa, sobrang laki ng matutulong nun sa energy stored ng katawan mo kaya matutulog ka munang butaw ka.</button>
                 </div>
             </div>
         </div>
