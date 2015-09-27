@@ -1,2 +1,43 @@
-$('#content').html("<%= j render 'questions/scene_1' %>");
+<% scene = "questions/scene_#{session[:scene_id]}" %>
+$('#content').html("<%= j render scene %>");
 $('#progress').html("<%= j render 'home/serkol_count' %>");
+
+    console.log('clicked');
+    var bar = Math.floor(1 + Math.random() * 3);
+    var val = Math.floor(1 + (Math.random() * 100)) + '%';
+
+    var curr_energy = parseInt($('#energy').text());
+    var curr_utility = parseInt($('#utility').text());
+    var curr_money = parseInt($('#money').text());
+
+    var add = Math.floor(2 + (Math.random() * 10))
+
+    <% utility_energy = ["1_2", "3_2"] %>
+    <% energy = ["3_4", "1_3"] %>
+
+    if(Math.round(Math.random()) == 0) {
+      add = (-1)*add;
+    }
+
+<% if utility_energy.include?(@id) %>
+  $('#utility').width((curr_utility+add)+'%').text((curr_utility+add)+'%');
+  $('#energy').width((curr_energy+add)+'%').text((curr_energy+add)+'%');
+<% elsif energy.include?(@id) %>
+  $('#energy').width((curr_energy+add)+'%').text((curr_energy+add)+'%');
+<% elsif @id == "17_1" %>
+  $('#utility').width('70%').text('70%');
+  $('#energy').width('70%').text('70%');
+  $('#money').width('70%').text('70%');
+<% else %>
+  switch (bar) {
+    case 1:
+      $('#utility').width(val).text(val);
+      break;
+    case 2:
+    $('#energy').width(val).text(val);
+      break;
+    case 3:
+      $('#money').width(val).text(val);
+      break;
+  }
+<% end %>

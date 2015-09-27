@@ -5,9 +5,10 @@
         </div>     
         <div id="questionanswer" class="col-md-4">
           <%= @question.text %> <br> <br>
-          <% @answers.each do |answer| %>
+          <% @answers.each_with_index do |answer, i| %>
             <li>
-              <%= button_to "#{answer.text}", next_scene_path(scene_id: answer.scene_id), remote: true, class: "btn btn-default", style: 'white-space: normal;' %>
+              <%= button_to "#{answer.text}", next_scene_path(scene_id: answer.scene_id), remote: true, class: "btn btn-default scene-link", id: "#{@question.scene_id}_#{answer.scene_id}", 
+                style: 'white-space: normal;' %>
               <br> <br>
             </li>
           <% end %>

@@ -15,7 +15,11 @@ class QuestionsController < ApplicationController
       session[:scene_id] = 1
       @question = Question.find_by(scene_id: 1)
       @answers = @question.answers
-    else 
+    else
+      if session[:scene_id] == "17"
+        session[:scene_count] = 1
+      end 
+      @id = "#{session[:scene_id]}_#{params[:scene_id]}"
       session[:scene_id] = params[:scene_id]
       @question = Question.find_by(scene_id: params[:scene_id])
       @answers = @question.answers
