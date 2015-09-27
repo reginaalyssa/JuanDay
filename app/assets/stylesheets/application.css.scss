@@ -112,7 +112,7 @@ body {
 #min {
     background: url('minhand.png');
     z-index: 2;         
-    -webkit-animation: rotate 1s infinite linear;
+    animation: rotate 1s infinite linear;
 }
            
 #hour {
