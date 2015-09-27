@@ -1,4 +1,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
     <script>
         var x = $("#min");   
         document.addEventListener("click", function (e){
@@ -13,6 +16,23 @@
         })
     
     </script>
+
+<!-- Modal -->
+<div class="modal fade in" id="welcome" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Welcome to Juan Day</h4>
+            </div>
+            <div class="modal-body">
+                <p> Hello! This is Juan Day, where we try to simulate what it feels like to live within Filipino Culture! Throughout the quiz, you'll be faced with mundane situations within the Filipino setting where our flaws as a society shall be made more apparent. The choice lies in your hands whether you'll cultivate this "culture" or take action to try and change it.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of modal -->
 
 <div id=core class="col-md-10">
     <div class="header"  id="main">
@@ -30,7 +50,7 @@
                     <br>
                     <button type="button" class="btn btn-default" id=choice1 style="white-space: normal;">Gigising ako malamang.</button>
                     <br> 
-                    <button type="button" class="btn btn-default" id=choice2 style="white-space: normal;">May 5 minutes pa, sobrang laki ng matutulong nun sa energy stored ng katawan mo kaya matutulog ka munang butaw ka.</button>
+                    <button type="button" class="btn btn-default" id=choice2 data-toggle="modal" href="#welcome" style="white-space: normal;">May 5 minutes pa, sobrang laki ng matutulong nun sa energy stored ng katawan mo kaya matutulog ka munang butaw ka.</button>
                 </div>
             </div>
         </div>
