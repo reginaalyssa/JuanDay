@@ -19,6 +19,17 @@ $('#progress').html("<%= j render 'home/serkol_count' %>");
       add = (-1)*add;
     }
 
+<% if @id == "1_2" %>
+   $(window).load(function(){
+     $('#filipinoTime').modal('show');
+   });
+<% elsif @id == "1_3" %>
+   $(window).load(function(){
+     $('#filipinoTime').modal('show');
+   });
+<% end %>
+
+
 <% if utility_energy.include?(@id) %>
   $('#utility').width((curr_utility+add)+'%').text((curr_utility+add)+'%');
   $('#energy').width((curr_energy+add)+'%').text((curr_energy+add)+'%');
