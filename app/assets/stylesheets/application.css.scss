@@ -109,7 +109,7 @@ body {
     left: 85px;
 }
 
-li #min {
+#min {
     background: url('minhand.png');
     z-index: 2;         
     -webkit-animation: rotate 1s infinite linear;
@@ -119,7 +119,7 @@ li #min {
     background: url('hourhand.png');
     z-index: 1;
     animation: rotate 12s infinite linear;
-    }
+}
 
 #paused {
     animation-play-state: paused;
